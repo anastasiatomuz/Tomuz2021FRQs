@@ -11,7 +11,7 @@ public class WordMatch {
     public int scoreGuess(String guess) {
         int numAppeared = 0;
         int lenGuess = guess.length();
-        for (int i = 0; i < secret.length(); i ++){
+        for (int i = 0; i <= secret.length() - lenGuess; i ++){
             String temp = secret.substring(i, i + lenGuess);
             if (temp.equals(guess)){
                 numAppeared ++;
